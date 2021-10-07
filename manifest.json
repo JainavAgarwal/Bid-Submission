@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Win Bid",  
+    "description": "Wow",  
+    "version": "1.0",    
+    "permissions": ["tabs", "<all_urls>"],  
+
+    "browser_action": { 
+		"default_icon": {
+			"19": "images/icons/icon.png"
+		},
+        "default_popup": "popup.html"  
+    },
+	"background":{
+		"scripts":["background.js"]
+	},
+
+	"content_scripts":[
+		{
+		  "matches": ["https://*/*"],
+		  "js": ["contentScript.js"]
+		}
+	  ]
+}
+//https://rhbauction.procure247.com/eauction/bidder/bidding-hall/1515/1/4C2824FD5B1319796E4AC02688606B8E147AF88B
